@@ -25,7 +25,7 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 /* Root size drives every rem below — bump this to scale the whole page. */
-html { font-size: 24px; scroll-behavior: smooth; }
+html { font-size: 20px; scroll-behavior: smooth; }
 
 body {
   background: var(--bg);
