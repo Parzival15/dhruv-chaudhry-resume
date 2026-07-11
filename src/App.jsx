@@ -187,8 +187,8 @@ export default function App() {
 
         <footer className="foot reveal">
           <h2 className="foot__big">Let's build something.</h2>
-          <p>Open to software engineering & AI roles — and I reply fast.</p>
-          <a className="foot__cta" href={`mailto:${profile.email}`}>Get in touch →</a>
+          <p>Open to AI and software engineering roles.</p>
+          <a className="foot__cta" href={`mailto:${profile.email}`}>Get in touch</a>
         </footer>
       </div>
     </>
