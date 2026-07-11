@@ -31,9 +31,9 @@ export const experience = [
     place: 'Boston, MA',
     date: '07/2024 - Current',
     points: [
-      "<strong>Founding AI and full stack engineer</strong> for a large-scale automated internal regression-testing platform that UnitedHealth Group's contact-center operations rely on; used by <strong>45 teams</strong> across the organization. Additionally built an adoption dashboard tracking usage and impact metrics, and presented it to leaders across the organization to report progress and drive tool adoption.",
+      "<strong>Founding AI and full stack engineer</strong> for a large-scale automated internal regression-testing platform that UnitedHealth Group's contact-center operations rely on; <strong>used by 45 teams</strong> across the organization. Additionally built an adoption dashboard tracking usage and impact metrics, and presented it to leaders across the organization to report progress and drive tool adoption.",
       'Served as <strong>team lead delegate</strong> which included delegating and coordinating workstreams, unblocking engineers, and representing the team in leadership discussions.',
-      "Owned the platform's <strong>generative AI strategy</strong> end to end by architecting and deploying GenAI agents into production workflows that automate manual work at scale, cutting operational effort by <strong>~45%</strong>.",
+      "<strong>Owned the teams generative AI strategy</strong> end to end by architecting and deploying GenAI agents into production workflows that automate manual work at scale, <strong>cutting operational effort by ~45%</strong>.",
       'Designed and built <strong>REST APIs and microservices</strong> secured with <strong>OAuth2</strong> and role-based access control; drove application security and <strong>DevSecOps</strong> through continuous scanning and vulnerability remediation.',
       'Independently designed and delivered multiple live generative-AI training to <strong>30+ engineers and product managers</strong>, pairing hands-on demos with a written guide and post-session assessments to measure comprehension and accelerate responsible AI adoption.',
       'Partnered cross-functionally with engineering, product, and leadership to translate business vision into scalable AI solutions, presenting demos and proofs of concept to validate and refine concepts in a fast-paced environment.',
