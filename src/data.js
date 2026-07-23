@@ -18,7 +18,7 @@ export const profile = {
   // Role badges shown next to the title in the header.
   roles: [
     'AI Engineer @ UnitedHealth Group',
-    'Assistant AI Researcher @ Pennsylvania State University',
+    'AI Researcher @ Pennsylvania State University',
   ],
   // Punchy hero tagline under the name.
   tagline: 'Turning ambiguous problems into products people use.',
