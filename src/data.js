@@ -12,6 +12,7 @@ export const profile = {
   phoneHref: '7328378355',
   linkedin: 'https://www.linkedin.com/in/dhruv-chaudhry-/',
   linkedinLabel: 'linkedin.com/in/dhruv-chaudhry-',
+  x: 'https://x.com/Dhruv84779352',
   initials: 'DC',
   photo: 'headshot.jpg', // lives in /public
   // Role badges shown next to the title in the header.
@@ -162,18 +163,11 @@ export const education = {
         'Research (Spring 2025): <a href="/Clinicians-in-the-loop-Narrative-Review.pdf" target="_blank" rel="noopener" download="Clinicians-in-the-loop: A Narrative Review of Clinician-Facing Integrated AI Within Mental Health Workflows.pdf">Clinicians-in-the-Loop: A Narrative Review of Current Approaches to Integrating AI within Clinician Mental Health Workflows</a> (In Review)',
     },
     {
-      badge: '2022-2024',
+      badge: '2020-2024',
       degree: 'Bachelors of Computer Science and Business',
       org: 'Rutgers University, New Brunswick, NJ',
       detail:
         "Dean's List: Spring 2024. Undergraduate Student Alliance of Computer Scientists: Peer Mentor (Sep 2023-May 2024)",
-    },
-    {
-      badge: '2020-2022',
-      degree: 'Undergraduate Coursework',
-      org: 'New Jersey Institute of Technology, Newark, NJ',
-      detail:
-        "Dean's List (Fall 2020-Spring 2022). Robotics Club: Designed algorithms, built and programmed robots for VEX competitions using C++ (Fall 2021)",
     },
   ],
   certs: [
