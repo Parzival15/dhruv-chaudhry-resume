@@ -1,6 +1,54 @@
 import { useEffect, useState } from 'react';
 import { profile, experience, projects, skills, education, beyond } from './data.js';
 
+// Left-rail section navigation.
+const SECTIONS = [
+  { id: 'top', label: 'Intro' },
+  { id: 'experience', label: 'Experience' },
+  { id: 'projects', label: 'Projects' },
+  { id: 'skills', label: 'Skills' },
+  { id: 'education', label: 'Education' },
+  { id: 'beyond', label: 'Beyond' },
+];
+
+// Track which section is currently in view for the side nav.
+function useActiveSection() {
+  const [active, setActive] = useState('top');
+  useEffect(() => {
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) setActive(e.target.id);
+        });
+      },
+      { rootMargin: '-45% 0px -50% 0px' }
+    );
+    SECTIONS.forEach(({ id }) => {
+      const el = document.getElementById(id);
+      if (el) io.observe(el);
+    });
+    return () => io.disconnect();
+  }, []);
+  return active;
+}
+
+function SideNav() {
+  const active = useActiveSection();
+  return (
+    <nav className="sidenav" aria-label="Section navigation">
+      <ul>
+        {SECTIONS.map((s) => (
+          <li key={s.id}>
+            <a href={`#${s.id}`} className={active === s.id ? 'is-active' : ''}>
+              {s.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  );
+}
+
 // Reveal-on-scroll for elements with the .reveal class.
 function useReveal() {
   useEffect(() => {
@@ -50,39 +98,54 @@ export default function App() {
 
       <div className="scroll-progress" style={{ width: `${progress}%` }} aria-hidden="true" />
 
+      <SideNav />
+
       <div className="page">
         {/* ---- Header ---- */}
-        <header className="head">
-          <div className="head__top">
-            <span className="head__avatar">
-              <img src={`${import.meta.env.BASE_URL}${profile.photo}`} alt={profile.name} />
-            </span>
-            <div>
+        <header className="head" id="top">
+          <div className="head__grid">
+            <div className="head__intro">
+              <p className="head__eyebrow">Hi, I'm</p>
               <h1 className="head__name">
                 Dhruv <span className="grad">Chaudhry</span>
               </h1>
-              <div className="head__titlerow">
-                <p className="head__title">{profile.title}</p>
-                <div className="head__roles">
-                  {profile.roles.map((r) => (
-                    <span className="head__role" key={r}>{r}</span>
-                  ))}
-                </div>
+              <p className="head__summary">{profile.tagline}</p>
+              <p className="head__roles">
+                {profile.roles.map((r, i) => (
+                  <span key={r}>
+                    {i > 0 && <span className="dot-sep"> · </span>}
+                    {r}
+                  </span>
+                ))}
+              </p>
+              <div className="head__actions">
+                <a className="btn btn--primary" href={`mailto:${profile.email}`}>Get in touch</a>
+                <a
+                  className="btn btn--icon"
+                  href={profile.linkedin}
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="LinkedIn"
+                  title="LinkedIn"
+                >
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+                    <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z" />
+                  </svg>
+                </a>
               </div>
             </div>
+            <div className="head__photo">
+              <img src={`${import.meta.env.BASE_URL}${profile.photo}`} alt={profile.name} />
+            </div>
           </div>
-          <p className="head__summary">{profile.summary}</p>
-          <div className="head__links">
-            <a href={`mailto:${profile.email}`}>{profile.email}</a>
-            <span className="dot-sep">·</span>
-            <a href={profile.linkedin} target="_blank" rel="noopener">{profile.linkedinLabel}</a>
-            <span className="dot-sep">·</span>
-            <a href={`tel:${profile.phoneHref}`}>{profile.phone}</a>
-          </div>
+          <a className="head__scroll" href="#experience" aria-label="Scroll to content">
+            <span>Scroll</span>
+            <span className="head__scroll-arrow" aria-hidden="true">↓</span>
+          </a>
         </header>
 
         {/* ---- Experience ---- */}
-        <Section num="01" title="Experience">
+        <Section num="01" title="Experience" id="experience">
           <div className="timeline">
             {experience.map((job, i) => (
               <article className="job reveal" key={i}>
@@ -102,13 +165,23 @@ export default function App() {
                 <div className="tags">
                   {job.tags.map((t) => <span className="tag" key={t}>{t}</span>)}
                 </div>
+                {job.org === 'Pennsylvania State University' && (
+                  <a
+                    className="job__paper-link"
+                    href={`${import.meta.env.BASE_URL}Clinicians-in-the-loop-Narrative-Review.pdf`}
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    View paper (PDF) ↗
+                  </a>
+                )}
               </article>
             ))}
           </div>
         </Section>
 
         {/* ---- Projects ---- */}
-        <Section num="02" title="Featured Projects">
+        <Section num="02" title="Featured Projects" id="projects">
           <div className="projects">
             {projects.map((p, i) => (
               <article className="proj reveal" key={i} style={{ transitionDelay: `${i * 70}ms` }}>
@@ -130,7 +203,7 @@ export default function App() {
         </Section>
 
         {/* ---- Skills ---- */}
-        <Section num="03" title="Skills">
+        <Section num="03" title="Skills" id="skills">
           <div className="skills">
             {skills.map((group, i) => (
               <div className="skill-group reveal" key={group.title} style={{ transitionDelay: `${i * 70}ms` }}>
@@ -152,7 +225,7 @@ export default function App() {
         </Section>
 
         {/* ---- Education ---- */}
-        <Section num="04" title="Education">
+        <Section num="04" title="Education" id="education">
           {education.schools.map((s, i) => (
             <article className="edu reveal" key={i}>
               <div className="edu__head">
@@ -174,7 +247,7 @@ export default function App() {
         </Section>
 
         {/* ---- Beyond ---- */}
-        <Section num="05" title="Beyond the Code">
+        <Section num="05" title="Beyond the Code" id="beyond">
           <div className="beyond reveal">
             {beyond.map((b, i) => (
               <span className="beyond__chip" key={i}>
@@ -195,9 +268,9 @@ export default function App() {
   );
 }
 
-function Section({ num, title, children }) {
+function Section({ num, title, id, children }) {
   return (
-    <section className="section">
+    <section className="section" id={id}>
       <div className="section__head reveal">
         <span className="section__num">{num}</span>
         <h2 className="section__title">{title}</h2>

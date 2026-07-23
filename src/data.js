@@ -19,7 +19,9 @@ export const profile = {
     'AI Engineer @ UnitedHealth Group',
     'Assistant AI Researcher @ Pennsylvania State University',
   ],
-  // One-line hook under the name.
+  // Punchy hero tagline under the name.
+  tagline: 'Turning ambiguous problems into products people use.',
+  // One-line hook (used elsewhere / for meta).
   summary:
     'AI engineer who builds, ships, and secures GenAI-enabled software at enterprise scale and a relentless prototyper who turns ambiguous problems into working products fast.',
 };
@@ -46,7 +48,7 @@ export const experience = [
     place: 'Remote',
     date: '01/2025 - 03/2026',
     points: [
-      'Co-authored <strong>Clinicians-in-the-loop: A Narrative Review of Clinician-Facing Integrated AI Within Mental Health Workflows</strong> (In Review): conducted subject matter expert interviews and analyzed <strong>12 HITL-AI tools</strong> in clinician mental health workflows for decision support, training, and ethical integration.',
+      'Co-authored <strong><a href="/Clinicians-in-the-loop-Narrative-Review.pdf" target="_blank" rel="noopener" download="Clinicians-in-the-loop: A Narrative Review of Clinician-Facing Integrated AI Within Mental Health Workflows.pdf">Clinicians-in-the-loop: A Narrative Review of Clinician-Facing Integrated AI Within Mental Health Workflows</a></strong> (In Review): conducted subject matter expert interviews and analyzed <strong>12 HITL-AI tools</strong> in clinician mental health workflows for decision support, training, and ethical integration.',
       'Led building efforts for a <strong>Streamlit RAG application</strong> integrating <strong>GPT 4</strong> with a <strong>ChromaDB</strong> vector store to retrieve from a clinical document corpus, letting clinicians query patient issues through an LLM for decision support through prototyping a working human-in-the-loop AI tool alongside the review. Demoed to clinicians and faculty from external institutions (incl. <strong>Georgia State and Carnegie Mellon</strong>), gathering feedback to iterate on the tool over time and tracking adoption to validate real-world usefulness.',
       'Synthesized findings on construct validity, clinician-AI interaction, and real-world feasibility to identify gaps in evaluation and deployment',
     ],
@@ -157,7 +159,7 @@ export const education = {
       degree: 'Masters of Artificial Intelligence',
       org: 'Pennsylvania State University, Online',
       detail:
-        'Research (Spring 2025): Clinicians-in-the-Loop: A Narrative Review of Current Approaches to Integrating AI within Clinician Mental Health Workflows (In Review)',
+        'Research (Spring 2025): <a href="/Clinicians-in-the-loop-Narrative-Review.pdf" target="_blank" rel="noopener" download="Clinicians-in-the-loop: A Narrative Review of Clinician-Facing Integrated AI Within Mental Health Workflows.pdf">Clinicians-in-the-Loop: A Narrative Review of Current Approaches to Integrating AI within Clinician Mental Health Workflows</a> (In Review)',
     },
     {
       badge: '2022-2024',
