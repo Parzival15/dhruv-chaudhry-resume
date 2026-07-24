@@ -13,6 +13,7 @@ export const profile = {
   linkedin: 'https://www.linkedin.com/in/dhruv-chaudhry-/',
   linkedinLabel: 'linkedin.com/in/dhruv-chaudhry-',
   x: 'https://x.com/Dhruv84779352',
+  github: 'https://github.com/Parzival15',
   initials: 'DC',
   photo: 'headshot.jpg', // lives in /public
   // Role badges shown next to the title in the header.
