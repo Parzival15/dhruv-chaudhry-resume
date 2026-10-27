@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { profile, experience, projects, skills, education, beyond } from './data.js';
+import SketchHero from './SketchHero.jsx';
 
 // Left-rail section navigation.
 const SECTIONS = [
@@ -159,9 +160,11 @@ export default function App() {
                 </a>
               </div>
             </div>
-            <div className="head__photo">
-              <img src={`${import.meta.env.BASE_URL}${profile.photo}`} alt={profile.name} />
-            </div>
+            <SketchHero
+              photo={`${import.meta.env.BASE_URL}${profile.photo}`}
+              name={profile.name}
+              idleTitle={profile.title}
+            />
           </div>
           <a className="head__scroll" href="#experience" aria-label="Scroll to content">
             <span>Scroll</span>
@@ -222,6 +225,13 @@ export default function App() {
                 <div className="tags">
                   {p.tags.map((t) => <span className="tag" key={t}>{t}</span>)}
                 </div>
+                {p.links && p.links.length > 0 && (
+                  <div className="proj__links">
+                    {p.links.map((l) => (
+                      <a className="proj__link" href={l.href} target="_blank" rel="noopener noreferrer" key={l.href}>{l.label}</a>
+                    ))}
+                  </div>
+                )}
               </article>
             ))}
           </div>
@@ -287,7 +297,6 @@ export default function App() {
         <Section num="06" title="Contact" id="contact">
           <div className="contact reveal">
             <h3 className="contact__big">Let's build something.</h3>
-            <p className="contact__sub">Open to AI and software engineering roles — the fastest way to reach me is email.</p>
             <a className="contact__email" href={`mailto:${profile.email}`}>{profile.email}</a>
             <div className="contact__row">
               <a className="btn btn--primary" href={`mailto:${profile.email}`}>Get in touch</a>
