@@ -5,7 +5,7 @@
 
 export const profile = {
   name: 'Dhruv Chaudhry',
-  title: 'AI & Full-Stack Engineer',
+  title: 'Senior AI/ML Engineer',
   location: 'Boston, MA',
   email: 'dhruvchaudhry15@gmail.com',
   phone: '732-837-8355',
@@ -18,31 +18,44 @@ export const profile = {
   photo: 'headshot.jpg', // lives in /public
   // Role badges shown next to the title in the header.
   roles: [
-    'AI Engineer @ UnitedHealth Group',
-    'AI Researcher @ Pennsylvania State University',
+    'Senior AI/ML Engineer @ UnitedHealth Group',
+    'Research Assistant @ Pennsylvania State University',
   ],
   // Punchy hero tagline under the name.
   tagline: 'Turning ambiguous problems into products people use.',
-  // One-line hook (used elsewhere / for meta).
+  // Professional summary (currently NOT rendered in the hero — you removed it).
   summary:
-    'AI engineer who builds, ships, and secures GenAI-enabled software at enterprise scale and a relentless prototyper who turns ambiguous problems into working products fast.',
+    'Software Engineer with 2+ years building production software and AI-powered enterprise applications. Experienced leading end-to-end delivery — from gathering ambiguous business requirements from stakeholders to designing, developing, deploying, and maintaining scalable cloud-native systems used across 45+ enterprise teams. Strong background in Python, distributed systems, APIs, AWS, and GenAI, with a proven ability to partner directly with business stakeholders to deliver impactful software.',
 };
 
 export const experience = [
   {
-    role: 'AI Engineer',
+    // TODO: confirm start date (placeholder below) and refine copy together.
+    role: 'Senior AI/ML Engineer',
     org: 'UnitedHealth Group',
     place: 'Boston, MA',
-    date: '07/2024 - Current',
+    date: '10/2026 - Current',
     points: [
-      "<strong>Founding AI and full stack engineer</strong> for a large-scale automated internal regression-testing platform that UnitedHealth Group's contact-center operations rely on; <strong>used by 45 teams</strong> across the organization. Additionally built an adoption dashboard tracking usage and impact metrics, and presented it to leaders across the organization to report progress and drive tool adoption.",
-      'Served as <strong>team lead delegate</strong> which included delegating and coordinating workstreams, unblocking engineers, and representing the team in leadership discussions.',
-      "<strong>Owned the teams generative AI strategy</strong> end to end by architecting and deploying GenAI agents into production workflows that automate manual work at scale, <strong>cutting operational effort by ~45%</strong>.",
-      'Designed and built <strong>REST APIs and microservices</strong> secured with <strong>OAuth2</strong> and role-based access control; drove application security and <strong>DevSecOps</strong> through continuous scanning and vulnerability remediation.',
-      'Independently designed and delivered multiple live generative-AI training to <strong>30+ engineers and product managers</strong>, pairing hands-on demos with a written guide and post-session assessments to measure comprehension and accelerate responsible AI adoption.',
-      'Partnered cross-functionally with engineering, product, and leadership to translate business vision into scalable AI solutions, presenting demos and proofs of concept to validate and refine concepts in a fast-paced environment.',
+      'Forward Deployed Engineer building and deploying <strong>AI-powered solutions</strong> — LLM-based workflows, copilots, and automation tools — directly within healthcare payer and provider <strong>client environments</strong>.',
+      'Translate solution designs into production-ready code, implementing <strong>integrations between AI models, APIs, and enterprise healthcare systems</strong> on distributed, cloud-native platforms.',
+      'Partner with senior engineers, consulting leads, and client stakeholders across engagements — driving iterative delivery cycles, technical working sessions, and knowledge transfer to client technical teams.',
+      'Design prototypes with a clear path to production and contribute <strong>reusable implementation patterns, assets, and playbooks</strong> for transition to production engineering teams.',
     ],
-    tags: ['AI Engineer', 'Team Lead', 'GenAI', 'REST APIs', 'OAuth2', 'DevSecOps', 'AWS'],
+    tags: ['Forward Deployed Engineer', 'GenAI', 'LLMs', 'Copilots', 'Healthcare AI', 'Python', 'AWS', 'Client Delivery'],
+  },
+  {
+    role: 'Associate Software Engineer',
+    org: 'UnitedHealth Group',
+    place: 'Boston, MA',
+    date: '07/2024 - 10/2026',
+    points: [
+      "<strong>Founded and built</strong> an AI-powered regression-testing platform <strong>used by 45 internal teams</strong> at UnitedHealth Group, automating contact-center application testing and replacing manual validation workflows.",
+      'Partnered directly with engineering, product, and business stakeholders to translate ambiguous operational problems into production software, iterating rapidly from proof of concept to deployment.',
+      'Led cross-functional engineering efforts as <strong>team lead delegate</strong> — defining technical scope, coordinating implementation, resolving blockers, and presenting architecture and project updates to senior leadership.',
+      'Built <strong>scalable REST APIs and microservice-based backend services</strong> integrating OpenAI, AWS Bedrock, internal enterprise platforms, and third-party APIs.',
+      'Designed and deployed <strong>secure backend services and APIs</strong> using Python, REST, OAuth2, RBAC, CI/CD, automated testing, and monitoring to support production AI applications.',
+    ],
+    tags: ['GenAI', 'OpenAI', 'AWS Bedrock', 'REST APIs', 'Microservices', 'OAuth2', 'RBAC', 'CI/CD', 'Team Lead'],
   },
   {
     role: 'Research Assistant',
@@ -50,11 +63,10 @@ export const experience = [
     place: 'Remote',
     date: '01/2025 - 03/2026',
     points: [
-      'Co-authored <strong><a href="/Clinicians-in-the-loop-Narrative-Review.pdf" target="_blank" rel="noopener" download="Clinicians-in-the-loop: A Narrative Review of Clinician-Facing Integrated AI Within Mental Health Workflows.pdf">Clinicians-in-the-loop: A Narrative Review of Clinician-Facing Integrated AI Within Mental Health Workflows</a></strong> (In Review): conducted subject matter expert interviews and analyzed <strong>12 HITL-AI tools</strong> in clinician mental health workflows for decision support, training, and ethical integration.',
-      'Led building efforts for a <strong>Streamlit RAG application</strong> integrating <strong>GPT 4</strong> with a <strong>ChromaDB</strong> vector store to retrieve from a clinical document corpus, letting clinicians query patient issues through an LLM for decision support through prototyping a working human-in-the-loop AI tool alongside the review. Demoed to clinicians and faculty from external institutions (incl. <strong>Georgia State and Carnegie Mellon</strong>), gathering feedback to iterate on the tool over time and tracking adoption to validate real-world usefulness.',
-      'Synthesized findings on construct validity, clinician-AI interaction, and real-world feasibility to identify gaps in evaluation and deployment',
+      'Co-authored <strong><a href="/Clinicians-in-the-loop-Narrative-Review.pdf" target="_blank" rel="noopener" download="Clinicians-in-the-loop: A Narrative Review of Clinician-Facing Integrated AI Within Mental Health Workflows.pdf">Clinicians-in-the-loop: A Narrative Review of Clinician-Facing Integrated AI Within Mental Health Workflows</a></strong> (under review), evaluating <strong>12 human-in-the-loop AI systems</strong> through literature analysis and expert interviews to identify best practices for clinical AI deployment.',
+      'Built a <strong>Streamlit RAG application</strong> using GPT-4 and ChromaDB for clinician decision support, presenting iterative prototypes to clinicians and faculty and refining the system based on stakeholder feedback.',
     ],
-    tags: ['AI Research', 'RAG', 'GPT 4', 'ChromaDB', 'Streamlit', 'HITL'],
+    tags: ['AI Research', 'RAG', 'GPT-4', 'ChromaDB', 'Streamlit', 'HITL'],
   },
   {
     role: 'Software Engineering Intern',
@@ -62,7 +74,7 @@ export const experience = [
     place: 'Seattle, WA',
     date: '05/2022 - 12/2022',
     points: [
-      "Built <strong>full-stack features</strong> for Sukhi's B2B employee mental-health platform (React.js, Python, PHP, SQL) - a digital wellness product serving enterprise clients. Developed custom frontend components and backend logic while collaborating cross-functionally with UX designers and product managers on the Figma-based design.",
+      "Built <strong>full-stack features</strong> for an early-stage B2B employee mental-health platform (React.js, Python, PHP, SQL) - a digital wellness product serving enterprise clients. Developed custom frontend components and backend logic while collaborating cross-functionally with UX designers and product managers on the Figma-based design.",
     ],
     tags: ['React.js', 'Python', 'PHP', 'SQL', 'Figma'],
   },
@@ -71,85 +83,85 @@ export const experience = [
 // Featured personal / open-source builds.
 export const projects = [
   {
-    name: 'Movi, Full-Stack Social Movie-Ranking App',
+    name: 'Logaria, AI Video Intelligence & Annotation Platform',
     blurb: 'Personal Project · 02/2026 - Current',
     points: [
-      'Rapidly prototyped and shipped a cross-platform social movie-ranking app end to end in <strong>Cursor</strong> (React Native/Expo, Next.js 14, TypeScript, Supabase/Postgres), taking it solo from concept to an installable <strong>PWA deployed on Vercel</strong>.',
-      'Onboarded <strong>34 users</strong> through a live product demo, collecting real usage and feedback to iterate on features and validate adoption.',
-      'Integrated the <strong>OpenAI API</strong> to power custom movie likeability scores which can be combined between two users to generate combined genre preference, and generated shareable AI mood-board images server-side via <strong>Cloudflare Workers AI (FLUX.1-schnell)</strong>.',
-      'Integrated <strong>Airtable</strong> via its API as a product-ops backend for tracking feature delivery and roadmap status, and organizing user-feedback data to surface adoption trends and prioritize improvements.',
-      'Engineered a <strong>binary-search ranking engine</strong> ("which did you like more?") backed by a Postgres RPC converting subjective picks into consistent 0-10 scores per sentiment band.',
-      'Architected a <strong>433-line Postgres schema</strong> with row-level-security policies and ranking RPCs, plus a Next.js admin dashboard (moderation, live stats) secured with HMAC-signed-cookie auth.',
+      'Architected and shipped a <strong>production-ready video intelligence and annotation platform</strong> (Next.js, TypeScript, Supabase, PostgreSQL) from technical spec through tested deployment, supporting customer-specific enterprise, education, research, and media workflows.',
+      'Built <strong>agent workflows</strong> that transform uploaded video into time-coded transcripts, annotations, chapters, summaries, knowledge maps, and action items via a canonical data model — modeling the data, shipping the pipeline, and validating the output.',
+      'Built a durable <strong>11-stage PostgreSQL-backed processing pipeline</strong> with atomic job claims, renewable leases, crash recovery, bounded retries, lifecycle auditing, forced <strong>Row-Level Security</strong>, owner-only access, and automated migration/RLS tests in CI.',
     ],
-    tags: ['React Native', 'Next.js 14', 'TypeScript', 'Supabase/Postgres', 'OpenAI API', 'Cloudflare Workers AI', 'Airtable', 'Vercel'],
+    tags: ['Next.js', 'TypeScript', 'Supabase', 'PostgreSQL', 'Agent Workflows', 'Row-Level Security', 'CI/CD', 'Video AI'],
   },
 ];
 
 export const skills = [
   {
-    title: 'Cloud & Data',
+    title: 'Languages & Frameworks',
     items: [
-      { name: 'AWS Cloud & Lambda', level: 'Fluent · Certified' },
-      { name: 'Azure', level: 'Fluent · Certified' },
-      { name: 'SQL / PostgreSQL', level: 'Fluent' },
-      { name: 'Excel', level: 'Fluent' },
-    ],
-  },
-  {
-    title: 'Generative AI & ML',
-    items: [
-      { name: 'Prompt Engineering' },
-      { name: 'Generative AI' },
-      { name: 'Retrieval Augmented Generation' },
-      { name: 'GitHub Copilot' },
-      { name: 'Cursor' },
-      { name: 'Replit' },
-      { name: 'Rapid Prototyping' },
-      { name: 'Supervised & Unsupervised Learning' },
-      { name: 'Neural Networks' },
-      { name: 'Deep Learning' },
-      { name: 'Transformers' },
-      { name: 'NLP' },
-      { name: 'Model Evaluation' },
-      { name: 'Feature Engineering' },
-      { name: 'Dimensionality Reduction (PCA)' },
-      { name: 'Streamlit' },
-      { name: 'HuggingFace' },
-      { name: 'Embeddings & Vector Databases (ChromaDB)' },
-      { name: 'Fine-Tuning Concepts' },
-    ],
-  },
-  {
-    title: 'Backend',
-    items: [
-      { name: 'Java', level: 'Fluent' },
       { name: 'Python', level: 'Fluent' },
       { name: 'SQL', level: 'Fluent' },
-      { name: 'C++', level: 'Intermediate' },
-      { name: 'REST APIs', level: 'Fluent' },
-      { name: 'Microservices', level: 'Fluent' },
+      { name: 'TypeScript', level: 'Fluent' },
+      { name: 'JavaScript' },
+      { name: 'Java' },
+      { name: 'C++' },
+      { name: 'React' },
+      { name: 'React Native (Expo)' },
+      { name: 'Next.js' },
+      { name: 'REST APIs' },
     ],
   },
   {
-    title: 'Frontend',
+    title: 'AI / ML',
     items: [
-      { name: 'JavaScript', level: 'Fluent' },
-      { name: 'React.js', level: 'Fluent' },
-      { name: 'HTML', level: 'Fluent' },
-      { name: 'CSS', level: 'Fluent' },
-      { name: 'Swift', level: 'Intermediate' },
+      { name: 'GenAI', level: 'Fluent' },
+      { name: 'LLMs', level: 'Fluent' },
+      { name: 'Agentic Workflows', level: 'Fluent' },
+      { name: 'Retrieval-Augmented Generation (RAG)', level: 'Fluent' },
+      { name: 'Tool / Function Calling' },
+      { name: 'Prompt Engineering' },
+      { name: 'Prompt Management' },
+      { name: 'Vector Databases (ChromaDB)' },
+      { name: 'Embeddings' },
+      { name: 'LLM Evaluation' },
+      { name: 'Human-in-the-Loop Systems' },
+      { name: 'Model Monitoring' },
+      { name: 'Claude API' },
+      { name: 'OpenAI API' },
+      { name: 'AWS Bedrock' },
+      { name: 'Bedrock Agents' },
+      { name: 'Claude Code' },
+      { name: 'Cursor' },
+      { name: 'OpenAI Codex' },
     ],
   },
   {
-    title: 'Tools & Other',
+    title: 'Cloud & Infrastructure',
     items: [
-      { name: 'Unity' },
-      { name: 'BluePrism' },
-      { name: 'MATLAB' },
+      { name: 'AWS (Lambda, DynamoDB, Bedrock)', level: 'Fluent' },
+      { name: 'PostgreSQL', level: 'Fluent' },
+      { name: 'Azure' },
+      { name: 'Supabase' },
+      { name: 'CI/CD' },
       { name: 'Git' },
-      { name: 'OOP' },
-      { name: 'Linux' },
-      { name: 'MS Suite' },
+      { name: 'Logging & Monitoring' },
+      { name: 'Data Pipelines' },
+      { name: 'ETL / ELT' },
+      { name: 'Snowflake' },
+      { name: 'Databricks' },
+    ],
+  },
+  {
+    title: 'Healthcare & Delivery',
+    items: [
+      { name: 'Stakeholder Management', level: 'Fluent' },
+      { name: 'Solution Design', level: 'Fluent' },
+      { name: 'Healthcare Operations' },
+      { name: 'Healthcare Data' },
+      { name: 'Privacy / Compliance' },
+      { name: 'Technical Scoping' },
+      { name: 'Testing' },
+      { name: 'Documentation' },
+      { name: 'Agile / Sprint Planning' },
     ],
   },
 ];
@@ -180,9 +192,9 @@ export const education = {
 
 // Compact interest chips — emoji + short label.
 export const beyond = [
-  { emoji: '🥋', title: 'Black Belt · Tae Kwon Do' },
-  { emoji: '🏓', title: 'Pickleball' },
+  { emoji: '🥋', title: 'First-degree Black Belt · Tae Kwon Do' },
   { emoji: '🏃', title: 'Running · 5:25 mile' },
+  { emoji: '🏓', title: 'Pickleball' },
   { emoji: '♟️', title: 'Chess' },
   { emoji: '🎸', title: 'Guitar' },
   { emoji: '🍓', title: 'Raspberry Pi' },
